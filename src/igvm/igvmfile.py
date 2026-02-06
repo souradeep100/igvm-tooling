@@ -384,7 +384,7 @@ class IGVMHeaders:
             # IGVM parser assumes the header is aligned by 8
             aligned_size = ((size + 7) >> 3) << 3
             out.extend(bytes(h))
-            out.extend(b'0'*(aligned_size-size))
+            out.extend(b'\x00'*(aligned_size-size))
 
         self.headers[0].Checksum = zlib.crc32(out)
 
@@ -400,7 +400,7 @@ class IGVMHeaders:
             #IGVM parser assumes the header is aligned by 8
             aligned_size = ((size + 7) >> 3) << 3
             out.extend(bytes(h))
-            out.extend(b'0'*(aligned_size-size))
+            out.extend(b'\x00'*(aligned_size-size))
         return out
 
     @staticmethod
