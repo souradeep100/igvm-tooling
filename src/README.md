@@ -1,3 +1,6 @@
+> [!WARNING] 
+> We recommend moving to a properly supported solution such as the one in OpenVMM at https://github.com/microsoft/openvmm/tree/main/vm/loader/igvmfilegen.
+
 # IGVM Image Generator
 
 ## Install
